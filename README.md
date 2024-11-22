@@ -14,4 +14,4 @@ tactics overview, asking you to pick something
 
 after you pick something
 
-![Screenshot_21](https://github.com/user-attachments/assets/cfca2206-0816-48e4-9600-0a2274b8ee70)
+![Screenshot_22](https://github.com/user-attachments/assets/790f4247-c2ee-47e1-b0c0-a8c70a21d46e)
