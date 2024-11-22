@@ -106,19 +106,20 @@ def getcode(d):
     return f'{getpython(d)}\n\n{getsubcall(d)}'
 
 try:
+    from colorama import init
+    init()
+except:
+    col = lambda ft, s: s
+    bgcol = lambda ft, s: s
+    print('no `colorama` library found (https://pypi.org/project/colorama/), will print ugly')
+
+try:
     tactics = readfile( path )['tactics']
     # list of dicts with: id, title, content, isPublic, owner
 except Exception as e:
     print(e)
     print(col('re', f'couldnt find `tactics` key in `{path}` file'))
     exit()
-
-try:
-    from colorama import init
-    init()
-except:
-    col = lambda ft, s: s
-    print('no `colorama` library found (https://pypi.org/project/colorama/), will print ugly')
 
 col1 = lambda i: col('ma', i)
 col2 = lambda i: col('blu', i)
