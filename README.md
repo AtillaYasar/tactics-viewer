@@ -2,7 +2,7 @@
 
 # What's tactics?
 - tactics is a product still in alpha, by Conjecture
-- basically an editor and programming language (called c-tat) and llm inference in one, you can use it for free via https://staging.tactics.dev/
+- basically an editor and programming language (called c-tat https://tactics.dev/docs) and llm inference in one, you can use it for free via https://staging.tactics.dev/,
 - it seems to be part of the implementation of something they call Cognitive Emulation, which they believe is a more economically useful and safe way to implement AI, because it's less blackboxy
 - read more at: https://www.conjecture.dev/research/cognitive-emulation-a-naive-ai-safety-proposal
 
