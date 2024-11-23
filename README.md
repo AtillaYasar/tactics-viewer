@@ -13,6 +13,7 @@
 # screenshots
 
 tactics overview, asking you to pick something
+(not all numbers of shown, because as you can see by the purple text `i['content'].strip()!=''`, it filters out tactics with an empty 'content' value)
 
 ![cli](https://github.com/user-attachments/assets/436097c2-beed-40ee-ad73-a65f296f2dea)
 
