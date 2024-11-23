@@ -20,4 +20,4 @@ after you pick something
 - basically an editor and programming language (called c-tat https://tactics.dev/docs) and llm inference in one, you can use it for free via https://staging.tactics.dev/,
 - (i believe that) it's part of the implementation of something they call Cognitive Emulation, which they believe is a more economically useful and safe way to implement AI, because it's less blackboxy
 - read more at: https://www.conjecture.dev/research/cognitive-emulation-a-naive-ai-safety-proposal
-- (this is at the end of readme, because if you're not here via the tactics discord how did you even get here lol)
+- (this is at the end of the readme, because if you're not here via the tactics discord how did you even get here lol)
