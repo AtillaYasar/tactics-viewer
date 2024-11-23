@@ -1,11 +1,5 @@
 # tactics-viewer
 
-# What's tactics?
-- tactics is a product still in alpha, by Conjecture
-- basically an editor and programming language (called c-tat https://tactics.dev/docs) and llm inference in one, you can use it for free via https://staging.tactics.dev/,
-- (i believe that) it's part of the implementation of something they call Cognitive Emulation, which they believe is a more economically useful and safe way to implement AI, because it's less blackboxy
-- read more at: https://www.conjecture.dev/research/cognitive-emulation-a-naive-ai-safety-proposal
-
 # usage
 - put a tactics json in `dumpresponse.json`:
     + open dev tools -> https://tactics.dev/dashboard -> network tab -> find the `https://api.tactics.dev/getTactics?sort=%22mostRecentlyUsed%22` call -> response tab -> paste to file
@@ -20,3 +14,10 @@ tactics overview, asking you to pick something
 after you pick something
 
 ![Screenshot_22](https://github.com/user-attachments/assets/790f4247-c2ee-47e1-b0c0-a8c70a21d46e)
+
+# What's tactics?
+- tactics is a product still in alpha, by Conjecture
+- basically an editor and programming language (called c-tat https://tactics.dev/docs) and llm inference in one, you can use it for free via https://staging.tactics.dev/,
+- (i believe that) it's part of the implementation of something they call Cognitive Emulation, which they believe is a more economically useful and safe way to implement AI, because it's less blackboxy
+- read more at: https://www.conjecture.dev/research/cognitive-emulation-a-naive-ai-safety-proposal
+- (this is at the end of a readme, because if you're not here via the tactics discord how did you even get here lol)
