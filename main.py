@@ -124,27 +124,44 @@ except Exception as e:
 col1 = lambda i: col('ma', i)
 col2 = lambda i: col('blu', i)
 
-# main loop to show tactics and take input
-    # inner loop to validate input
+# main loop to show tactics
+    # inner loop to take input and validate it
 while True:
     print(bgcol('cy', '-'*10))
     print( '[n]', col('cy', '[title]'), '[i] lines', col('ma', '\n  [first line]'), sep=col('ye', ' -- ') )
-    print( f'tactics filtered by: {col("ma", filterstring)}' )
     print(bgcol('cy', '-'*10))
     [ print( n, col('cy', i['title']), f"{len(i['content'].split('\n'))} lines", col('ma', '\n  ' + i['content'].split('\n')[0] ) , sep=f' {bgcol("ye", "--")} ', flush=1 ) if filt(i) else None for n,i in enumerate(tactics) ]
+    print( f'tactics filtered by: {col("ma", filterstring)}' )
     while True:
         print(bgcol('cy', '-'*10))
-        inp = input(f'> type a {col1("number")} to get {col1("source code")} and {col1("code for calling this tactic")}, or {col2("s")} to see the {col2("tactics list")} again\n')
+        inp = input(f'> type a {col1("number")} to get {col2("source code")} and {col2("code for calling this tactic")}, or {col1("s")} to see the {col2("tactics list")} again, or {col1('f = code')} to change the {col2('filter')}\n')
         if inp == 's':
             break
         else:
-            try:
-                t = tactics[int(inp)]
-            except:
-                print(col('re', 'wrong input, reeeee'))
-                continue
-        print(getsource(t))
-        print()
-        print(getcode(t))
-        print(col('cy', f'^^ n = {inp}, title = {t["title"]}'))
-    print(bgcol('cy', '-'*10))
+            parts = inp.split(' = ')
+            if len(parts)==2:
+                a, b = parts
+                if a == 'f':
+                    try:
+                        eval(b)
+                    except Exception as e:
+                        print(e)
+                        print(col('re', 'wrong input, reeeee'))
+                        continue
+                    else:
+                        filterstring = b
+                        filt = lambda i: eval(filterstring)
+                        break
+            else:
+                try:
+                    t = tactics[int(inp)]
+                except Exception as e:
+                    print(e)
+                    print(col('re', 'wrong input, reeeee'))
+                    continue
+                else:
+                    print(getsource(t))
+                    print()
+                    print(getcode(t))
+                    print(col('cy', f'^^ n = {inp}, title = {t["title"]}'))
+        print(bgcol('cy', '-'*10))
