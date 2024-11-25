@@ -143,7 +143,8 @@ while True:
                 a, b = parts
                 if a == 'f':
                     try:
-                        lambda i: eval(b)
+                        filt = lambda i: eval(b)
+                        filt(tactics[0])
                     except Exception as e:
                         print(e)
                         print(col('re', 'wrong input, reeeee'))
