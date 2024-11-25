@@ -134,7 +134,7 @@ while True:
     print( f'tactics filtered by: {col("ma", filterstring)}' )
     while True:
         print(bgcol('cy', '-'*10))
-        inp = input(f'> type a {col1("number")} to get {col2("source code")} and {col2("code for calling this tactic")}, or {col1("s")} to see the {col2("tactics list")} again, or {col1('f = code')} to change the {col2('filter')}\n')
+        inp = input(f'> type a {col1("number")} to get {col2("source code")} and {col2("code for calling this tactic")}, or {col1("s")} to see the {col2("tactics list")} again, or {col1('f = lambda i: "$do" in i["content"]')} to change the {col2('filter')}\n')
         if inp == 's':
             break
         else:
@@ -143,7 +143,7 @@ while True:
                 a, b = parts
                 if a == 'f':
                     try:
-                        eval(b)
+                        lambda i: eval(b)
                     except Exception as e:
                         print(e)
                         print(col('re', 'wrong input, reeeee'))
